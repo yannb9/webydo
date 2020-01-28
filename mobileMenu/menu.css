@@ -1,0 +1,224 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700);
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #444444;
+}
+
+a {
+  color: #ff7013;
+  text-decoration: none;
+}
+
+.hamburger-menu-button {
+  width: 40px;
+  height: 40px;
+  padding: 6px;
+  display: inline-block;
+  position: relative;
+  margin-top: 35px;
+  z-index: 100;
+  background: #fafafa;
+  border: 5px solid #fafafa;
+  box-sizing: content-box;
+  text-indent: 100%;
+  color: transparent;
+  white-space: nowrap;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.hamburger-menu-button:focus {
+  outline: 0;
+}
+
+.hamburger-menu-button-open {
+  top: 50%;
+  margin-top: -1px;
+  left: 50%;
+  margin-left: -12px;
+}
+
+.hamburger-menu-button-open,
+.hamburger-menu-button-open::before,
+.hamburger-menu-button-open::after {
+  position: absolute;
+  width: 22px;
+  height: 2px;
+  background: #a3a1a1;
+  border-radius: 4px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.hamburger-menu-button-open::before,
+.hamburger-menu-button-open::after {
+  left: 0;
+  content: "";
+}
+
+.hamburger-menu-button-open::before {
+  top: 6px;
+}
+
+.hamburger-menu-button-open::after {
+  bottom: 6px;
+}
+
+.hamburger-menu-button-close {
+  background: transparent;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.hamburger-menu-button-close::before {
+  -webkit-transform: translateY(-6px) rotate(45deg);
+  transform: translateY(-6px) rotate(45deg);
+}
+
+.hamburger-menu-button-close::after {
+  -webkit-transform: translateY(6px) rotate(-45deg);
+  transform: translateY(6px) rotate(-45deg);
+}
+
+.menu-mobile {
+  display: none;
+}
+
+.menu-desktop .ham-menu {
+  position: absolute;
+  top: 42px;
+  left: 48px;
+  margin: 0 0 0 5%;
+  max-width: 570px;
+  overflow: hidden;
+}
+
+.menu-desktop .ham-menu ul {
+  position: relative;
+  -webkit-transform: translateX(-110%);
+  transform: translateX(-110%);
+  /*   background-color: #3896d3; */
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-desktop .ham-menu.on ul {
+  -webkit-transform: translateX(0px);
+  transform: translateX(0px);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.ham-menu ul {
+  font-size: 0;
+  /*   position: absolute; */
+}
+
+.ham-menu ul li {
+  display: inline-block;
+}
+
+.ham-menu ul li:first-child .ham-menu ul li a {
+  padding-left: 28px;
+}
+
+.ham-menu ul li a {
+  padding: 15px;
+  display: block;
+  background-color: transparent;
+  color: #a3a1a1;
+  text-transform: uppercase;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  font-size: 13px;
+}
+
+@media only screen and (max-width: 600px) {
+  .ham-menu ul li a {
+    font-size: 21px;
+  }
+}
+
+.ham-menu ul li.active a, .ham-menu ul li a:hover {
+  /* background-color: #333030; */
+  color: #333030 !important;
+}
+
+.ham-menu ul li a:after {
+  content: '';
+  /*   position: absolute; */
+  width: 0;
+  height: 1px;
+  display: block;
+  margin-top: 5px;
+  right: 0;
+  background: black;
+  transition: width .2s ease;
+  -webkit-transition: width .2s ease;
+}
+
+.ham-menu ul li a:hover:after {
+  width: 100%;
+  left: 0;
+  background: black;
+}
+
+@media only screen and (max-width: 600px) {
+  button#hamburger-menu {
+    position: absolute;
+    right: 25px;
+  }
+
+  .menu-desktop {
+    display: none;
+  }
+
+  .menu-mobile {
+    display: block;
+  }
+
+  .menu-mobile .ham-menu {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fafafa;
+    transform: translateX(150%);
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    z-index: 99;
+  }
+
+  .toodle {
+    transform: translateX(0) !important;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .menu-mobile .ham-menu ul li {
+    display: inline-block;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(50%, 50%);
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .toggle {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translate(50%, 0) !important;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .menu-mobile .ham-menu ul {
+    -webkit-transform: translateX(-50%) translateY(40%);
+    transform: translateX(-50%) translateY(30%);
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+}
