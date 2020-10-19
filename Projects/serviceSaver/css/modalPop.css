@@ -1,0 +1,201 @@
+div#modal-overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  z-index: 2;
+}
+
+container#modal-pop {
+  display: none;
+  position: absolute;
+  width: 85%;
+  height: 85%;
+  background-color: #f0f0fc;
+  border-radius: 10px;
+  top: 5%;
+  left: 5%;
+  right: 0;
+  padding: 3%;
+  overflow: auto;
+  scroll-behavior: smooth;
+}
+
+container#modal-pop i.fas.fa-times {
+  font-weight: 900;
+  position: absolute;
+  right: 3%;
+  top: 3.5%;
+  font-size: 18px;
+  background-position-x: 10px !important;
+  cursor: pointer;
+}
+
+div#modal-loader {
+  background-image: url('https://yannb9.github.io/theservicesaver/img/loader.gif');
+  background-size: 100%;
+  width: 80px;
+  height: 110px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60%;
+  display: none;
+  background-repeat: no-repeat;
+}
+
+container#modal-pop h2 {
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  font-weight: 500;
+  margin: 10% 0 5% 0px;
+  background-color: #003c71;
+  color: #fafafa;
+  margin-bottom: 5%;
+  padding: 0.5%;
+}
+
+container#modal-pop div.col1, container#modal-pop div.col2 {
+  float: none;
+  width: 100%;
+}
+
+/* Column 1 to the left */
+container#modal-pop div.col1 {}
+
+container#modal-pop div.col1>img {
+  width: 100% !important;
+}
+
+container#modal-pop div.col2 {
+  padding-bottom: 10%;
+}
+
+container#modal-pop h3 {
+  font-size: 22px !important;
+  font-weight: 600 !important;
+  margin: 15px 0 !important;
+  text-align: center;
+}
+
+container#modal-pop p {
+  font-size: 14px !important;
+  line-height: 22px !important;
+  text-align: center !important;
+}
+
+container#modal-pop div.last {
+  text-align: center;
+  margin-top: 30px;
+}
+
+container#modal-pop a.productInfo {
+  margin-left: 10px;
+}
+
+container#modal-pop span.price, container#modal-pop a.productInfo {
+  font-size: 16px;
+  font-weight: bolder;
+}
+
+
+@media screen and (min-width: 639px) {
+  div#modal-loader {
+    margin-top: 50%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  div#modal-loader {
+    margin-top: 40%;
+  }
+
+  container#modal-pop h2 {
+    text-align: left;
+    font-weight: 500;
+    margin: 10% 0 5% 5%;
+    width: fit-content;
+  }
+
+  container#modal-pop div.col1>img {
+    width: 70% !important;
+    margin: 0 0 0 15% !important;
+  }
+
+  container#modal-pop div.col1, container#modal-pop div.col2 {
+    float: left !important;
+  }
+
+  container#modal-pop div.col1 {
+    width: 40%;
+  }
+
+  container#modal-pop div.col2 {
+    width: 60%;
+  }
+
+  container#modal-pop h3 {
+    font-size: 20px !important;
+    font-weight: 600 !important;
+    margin-bottom: 15px !important;
+    text-align: left !important;
+  }
+
+  container#modal-pop p {
+    font-size: 14px !important;
+    line-height: 22px !important;
+    text-align: left !important;
+  }
+
+  container#modal-pop div.last {
+    text-align: left;
+    margin-top: 30px;
+  }
+}
+
+@media screen and (min-width: 976px) {
+  div#modal-loader {
+    margin-top: 30%;
+  }
+
+  container#modal-pop h2 {
+    margin: 10% 0 5% 6%;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  container#modal-pop {
+    width: 55%;
+    height: 75%;
+    left: 20%;
+    right: 0;
+    padding: 3%;
+    overflow: auto;
+  }
+
+  div#modal-loader {
+    margin-top: 15%;
+  }
+
+  container#modal-pop h2 {
+    margin: 10% 0 5% 5%;
+  }
+
+  container#modal-pop div.col1 {
+    width: 35%;
+  }
+
+  container#modal-pop div.col1>img {
+    width: 90% !important;
+    margin: 0 0 0 15% !important;
+  }
+
+  container#modal-pop div.col2 {
+    margin-left: 5%;
+  }
